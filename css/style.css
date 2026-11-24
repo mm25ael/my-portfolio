@@ -1,0 +1,365 @@
+*{
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+/* header of every page */
+header{
+    background-color: black;
+    color:white;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1{
+    color: #f579d6;
+    font-size: 25px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navbar a{
+    color: white;
+    padding: 5px 12px; 
+    border-left: 2px solid gray;
+    transition: color 0.3s ease;
+}
+.navbar a:first-child{
+    border-left: none;
+}
+.navbar a:hover{
+    color: #f579d6;
+}
+
+/* common button style */
+
+.btn-style{
+    display: flex;
+    gap: 35px;
+    margin-top: 25px;
+}
+.btn-style a{
+    display: inline-block;
+    background-color: #f579d6;
+    padding: 10px 18px;
+    border: 1px solid black;
+    border-radius: 6px;
+    transition: background-color 0.4s ease;
+}
+.btn-style a:hover{
+    background-color: black;
+    color: #ff2ecb;
+}
+.center-btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* index.html page */
+
+main{
+    max-width: 1450px;
+    min-width: 650px;
+    min-height: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 360px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 15px;
+    gap: 55px;
+}
+.intro-texr{
+    flex: 1;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+}
+.welcome{
+    color: #A00070;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.intro-text h2{
+    font-size: 38px;
+    padding: 15px 0;
+}
+.intro-text h2 span{
+    color: #A00070;
+}
+.intro-text h3{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.introduction{
+    font-size: 16px;
+    line-height: 1.9;
+}
+.academic-info{
+    margin-top: 25px;
+}
+.academic-info h3{
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 15px;
+}
+.academic-card{
+    background-color: white;
+    border: 1px solid #f0d4e8;
+    border-left: 4px solid #A00070;
+    padding: 18px;
+    border-radius: 10px;
+}
+.academic-card h4{
+    color: #A00070;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.academic-card p{
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.profile-img{
+    width: 100%;
+    max-width: 400px;
+    min-width: 0;
+    flex: 0 1 400px;
+}
+.profile-img img{
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border: 3px solid #ff2ecb;
+    border-radius: 180px 180px 25px 25px;
+}
+
+/* Technical Interests page */
+
+.interests-main{
+    display: block;
+    margin: auto;
+    padding: 50px;
+}
+.interests-heading{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.interests-heading h2{
+    font-size: 32px;
+    padding: 0 0 10px;
+}
+.interests-heading p{
+    margin-bottom: 10px;
+}
+.interest-card{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #f579d6;
+    border-radius: 15px;
+    background-color: white;
+}
+.interest-image img{
+    background-color: #f579d6;
+    width: 300px;
+    height: 200px;
+    border-radius: 9px;
+}
+.interest-content{
+    flex: 1;
+}
+.interest-content h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.interest-content p{
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+/* portfolio.html page */
+
+.project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.project-card{
+    background-color: white;
+    border: 1px solid #f579d6;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: ease 0.3s;
+}
+.project-card:hover{
+    transform: translateY(-5px);
+}
+.project-image{
+    background-color: #f579d6;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-image h3{
+    font-size: 45px;
+    color: black;
+}
+.project-content{
+    padding: 25px;
+}
+.project-content h3{
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.project-content p{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+.project-tools{
+    color: black;
+    font-weight: bold;
+    padding: 0 0 10px;
+}
+.details-content a, .project-content a{
+    color: #A00070;
+    font-weight: bold;
+}
+
+/* project-details.html page */
+
+.details-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+.details-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f579d6;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    background-color: white;
+}
+.details-banner{
+    background-color: #f579d6;
+    padding: 20px;
+    text-align: center;
+}
+.details-banner h2{
+    font-size: 35px;
+    color: black;
+}
+.details-content{
+    padding: 30px;
+}
+.details-content h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.details-content h3{
+    font-size: 19px;
+    margin: 20px 0 10px;
+}
+.details-content p{
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.details-content ul{
+    line-height: 2;
+    padding-left: 25px;
+}
+
+/* contact.html page */
+
+.contact-main{
+    display: block;
+    padding: 40px;
+}
+.contact-main h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.contact-main p{
+    margin: 0 15% 25px;
+    text-align: center;
+    line-height: 1.6;
+}
+form{
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #f579d6;
+    border-radius: 12px;
+}
+form label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+form input, form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #f579d6;
+    border-radius: 6px;
+}
+form button{
+    background-color: black;
+    color: #f579d6;
+    border: 1px solid #f579d6;
+    border-radius: 6px;
+    padding: 10px 25px;
+    font-weight: bold;
+}
+form button:hover{
+    background-color: #f579d6;
+    color: black;
+    border: 1px solid black;
+}
+
+/* to remove outlines of the input box of the form */
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: none;
+}
+
+/* footer of every page */
+
+footer{
+    border-top: 1px solid #f579d6;
+    text-align: center;
+    padding: 20px 10px;
+}
+footer a:hover{
+    color: #f579d6;
+}
